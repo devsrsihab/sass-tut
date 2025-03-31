@@ -23,10 +23,10 @@ padding: comparable(11cm, 44mm);
 padding: random(10px);
 padding: unit(10rem);
 padding: unitless(10);
-</details> <details> <summary><strong>String Functions in SASS</strong></summary>
-scss
-Copy
-Edit
+</details> 
+
+<details> <summary><strong>String Functions in SASS</strong></summary>
+
 // ===== String Functions in SASS =====
 font-family: quote(Poppins);
 font-family: unquote("Poppins");
@@ -37,10 +37,9 @@ font-family: str-index("Helvitica Neue", "Neue");
 font-family: str-insert("Helvitica Neue", " Mono", 15);
 font-family: str-slice("Helvitica Neue", 11);
 font-family: unique-id();
-</details> <details> <summary><strong>Color Functions in SASS</strong></summary>
-scss
-Copy
-Edit
+</details>
+
+<details> <summary><strong>Color Functions in SASS</strong></summary>
 // ===== Color Functions in SASS =====
 background-color: $card-bg;
 background-color: darken($card_white_bg, 10);
@@ -50,10 +49,9 @@ background-color: saturate($primary-color, 100);
 background-color: desaturate($primary-color, 90);
 background-color: mix($primary-color, blue, 50);
 background-color: transparentize($primary-color, 0.8);
-</details> <details> <summary><strong>List Functions in SASS</strong></summary>
-scss
-Copy
-Edit
+</details>
+
+<details> <summary><strong>List Functions in SASS</strong></summary>
 // ===== List Functions in SASS =====
 $list: [10px 20px 30px 40px];
 $list2: 50px, 60px, 70px, 80px;
