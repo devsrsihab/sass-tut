@@ -17,8 +17,8 @@ This repository is for practicing various functions in SASS, including number fu
 - [11. Color Functions](#color-functions)
 - [12. List Functions](#list-functions)
 
-<details>
-  <summary id="variable"><strong>Variable in SASS</strong></summary>
+<details id="variable">
+  <summary ><strong>Variable in SASS</strong></summary>
 
 ```scss
 $primary: #3498db;
@@ -27,6 +27,56 @@ $text: #333;
 button {
   background: $primary;
   color: $text;
+}
+```
+
+</details>
+
+<details>
+  <summary><strong>Nesting in SASS</strong></summary>
+
+```scss
+.container {
+  width: 100%;
+  padding: 20px;
+
+  .header {
+    font-size: 24px;
+    color: #333;
+  }
+
+  .content {
+    margin-top: 10px;
+    font-size: 16px;
+
+    p {
+      color: #666;
+    }
+  }
+}
+```
+
+</details>
+
+<details>
+  <summary><strong>Partials & Imports in SASS</strong></summary>
+
+```scss
+// _variables.scss
+$primary-color: #3498db;
+$secondary-color: #2ecc71;
+```
+
+```scss
+// styles.scss
+@import "variables";
+
+body {
+  background-color: $primary-color;
+}
+
+.button {
+  background-color: $secondary-color;
 }
 ```
 
