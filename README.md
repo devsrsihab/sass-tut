@@ -3,16 +3,40 @@
 This repository is for practicing various functions in SASS, including number functions, string functions, color functions, and list functions.
 
 ## Table of Contents
-- [Number Functions](#number-functions)
-- [String Functions](#string-functions)
-- [Color Functions](#color-functions)
-- [List Functions](#list-functions)
+
+- [1. Variable](#variable)
+- [2. Nesting](#nesting)
+- [3. Partials & Imports](#partials-imports)
+- [4. Mixins](#mixins)
+- [5. Extend](#extend)
+- [6. Operators](#operators)
+- [7. Interpolation](#interpolation)
+- [8. Function](#function)
+- [9. Number Functions](#number-functions)
+- [10. String Functions](#string-functions)
+- [11. Color Functions](#color-functions)
+- [12. List Functions](#list-functions)
+
+<details>
+  <summary id="variable"><strong>Variable in SASS</strong></summary>
+
+```scss
+$primary: #3498db;
+$text: #333;
+
+button {
+  background: $primary;
+  color: $text;
+}
+```
+
+</details>
 
 <details>
   <summary><strong>Number Functions in SASS</strong></summary>
 
 ```scss
-// ===== Number Functions in SASS ===== 
+// ===== Number Functions in SASS =====
 padding: ceil(5.9);
 padding: floor(2.9);
 padding: round(2.4);
@@ -24,11 +48,12 @@ padding: random(10px);
 padding: unit(10rem);
 padding: unitless(10);
 ```
-</details> 
+
+</details>
 
 <details> <summary><strong>String Functions in SASS</strong></summary>
 
-  ```scss  
+```scss
 // ===== String Functions in SASS =====
 font-family: quote(Poppins);
 font-family: unquote("Poppins");
@@ -40,12 +65,13 @@ font-family: str-insert("Helvitica Neue", " Mono", 15);
 font-family: str-slice("Helvitica Neue", 11);
 font-family: unique-id();
 ```
+
 </details>
 
 <details> <summary><strong>Color Functions in SASS</strong></summary>
 
-  ```scss
-  // ===== Color Functions in SASS =====
+```scss
+// ===== Color Functions in SASS =====
 background-color: $card-bg;
 background-color: darken($card_white_bg, 10);
 background-color: lighten($primary-color, 34);
@@ -54,13 +80,14 @@ background-color: saturate($primary-color, 100);
 background-color: desaturate($primary-color, 90);
 background-color: mix($primary-color, blue, 50);
 background-color: transparentize($primary-color, 0.8);
-  ```
+```
+
 </details>
 
 <details> <summary><strong>List Functions in SASS</strong></summary>
 
-  ```scss
-  // ===== List Functions in SASS =====
+```scss
+// ===== List Functions in SASS =====
 $list: [10px 20px 30px 40px];
 $list2: 50px, 60px, 70px, 80px;
 padding: length($list);
@@ -72,5 +99,6 @@ padding: zip($list, $list2);
 padding: index($list, 300px);
 padding: list-separator($list2);
 padding: is-bracketed($list2);
-  ```
-</details> 
+```
+
+</details>
