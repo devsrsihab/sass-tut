@@ -27,7 +27,8 @@ padding: unitless(10);
 </details> 
 
 <details> <summary><strong>String Functions in SASS</strong></summary>
-```scss
+
+  ```scss  
 // ===== String Functions in SASS =====
 font-family: quote(Poppins);
 font-family: unquote("Poppins");
@@ -42,7 +43,8 @@ font-family: unique-id();
 </details>
 
 <details> <summary><strong>Color Functions in SASS</strong></summary>
-```scss
+
+  ```scss
   // ===== Color Functions in SASS =====
 background-color: $card-bg;
 background-color: darken($card_white_bg, 10);
@@ -56,7 +58,8 @@ background-color: transparentize($primary-color, 0.8);
 </details>
 
 <details> <summary><strong>List Functions in SASS</strong></summary>
-```scss
+
+  ```scss
   // ===== List Functions in SASS =====
 $list: [10px 20px 30px 40px];
 $list2: 50px, 60px, 70px, 80px;
