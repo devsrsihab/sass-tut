@@ -17,6 +17,7 @@ This repository is for practicing various functions in SASS, including number fu
 - [11. Color Functions](#colorFunctions)
 - [12. List Functions](#listFunctions)
 - [13. Selector ](#selector)
+- [14. Map ](#map)
 
 <details id="variable">
   <summary ><strong>1. Variable in SASS</strong></summary>
@@ -380,6 +381,54 @@ $selector: selector-extend(
 
 #{$selector} {
   width: 10px;
+}
+```
+
+</details>
+
+<details id="map">
+  <summary><strong>14. Map in SASS</strong></summary>
+
+```scss
+// ===== map in sass =====
+$font-weight: (
+  "thin": 100,
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+  "black": 900,
+);
+$light_weight: (
+  "thin": 100,
+  "light": 300,
+  "regular": 400,
+  "medium": 500,
+  "bold": 700,
+  "black": 900,
+);
+$bold_weight: (
+  "medium": 500,
+  "bold": 700,
+  "black": 900,
+);
+
+$map_merge: map-merge($light_weight, $bold_weight); // Merges both maps
+$map_mr: map-remove(
+  $light_weight,
+  "bold"
+); // Removes "bold" key from $light_weight
+
+.test {
+  font-weight: map-get(
+    $font-weight,
+    "thine"
+  ); // null (incorrect key, should be "thin")
+  font-weight: map-keys(
+    $font-weight
+  ); // ("thin", "light", "regular", "medium", "bold", "black")
+  font-weight: map-values($font-weight); // (100, 300, 400, 500, 700, 900)
+  font-weight: map-has-key($light_weight, "thin"); // true
 }
 ```
 
