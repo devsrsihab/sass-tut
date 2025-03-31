@@ -359,3 +359,27 @@ padding: is-bracketed($list2);
 ```
 
 </details>
+
+<details id="selector">
+  <summary><strong>10. Selector  in SASS</strong></summary>
+
+```scss
+// ===== selectors in sass =====
+$selector: selector-nest("ul", "li"); // "ul li"
+$selector: selector-append(".acb,", "_active"); // ".acb_active"
+$selector: selector-replace("a.abc.extra", ".extra", ".sohan"); // "a.abc.sohan"
+$selector: is-superselector("a", "nav a"); // true
+$selector: simple-selectors("a.sohan"); // ["a", ".sohan"]
+$selector: selector-unify("a.active", "a.deactive"); // "a"
+$selector: selector-extend(
+  "a.active",
+  "a",
+  "deactive"
+); // "a.active, a.deactive"
+
+#{$selector} {
+  width: 10px;
+}
+```
+
+</details>
