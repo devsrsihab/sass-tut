@@ -11,7 +11,7 @@ This repository is for practicing various functions in SASS, including number fu
 <details>
   <summary><strong>Number Functions in SASS</strong></summary>
 
-```scss
+
 // ===== Number Functions in SASS ===== 
 padding: ceil(5.9);
 padding: floor(2.9);
@@ -24,7 +24,7 @@ padding: random(10px);
 padding: unit(10rem);
 padding: unitless(10);
 </details>
-```scss
+
 
 <details> <summary><strong>String Functions in SASS</strong></summary>
 // ===== String Functions in SASS =====
