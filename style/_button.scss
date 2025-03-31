@@ -1,0 +1,17 @@
+@import "variables";
+@import "mixins";
+
+.card-btn {
+  background-color: $primary-color;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  @include transition;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}

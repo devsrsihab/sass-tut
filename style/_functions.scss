@@ -1,0 +1,8 @@
+@import "variables";
+
+// half width
+@function half-width($width) {
+  @return $container-width / 2;
+}
+
+//

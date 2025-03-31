@@ -1,0 +1,74 @@
+@import "variables";
+@import "mixins";
+@import "functions";
+
+.card {
+  width: half-width($container-width);
+  border-radius: 10px;
+  overflow: hidden;
+  @include box-shadow(20px);
+  @include transition(0.4s);
+  cursor: pointer;
+  margin: 50px auto;
+
+  // ===== number functions in sass =====
+  // padding: ceil(5.9);
+  // padding: floor(2.9);
+  // padding: round(2.4);
+  // padding: max(1px, 4px);
+  // padding: min(2px, 4px);
+  // padding: percentage(0.76);
+  // padding: comparable(11cm, 44mm);
+  // padding: random(10px);
+  // padding: unit(10rem);
+  // padding: unitless(10);
+
+  // ===== string funcions in sass =====
+  // font-family: quote(Poppins);
+  // font-family: unquote("Poppins");
+  // font-family: to-upper-case("Poppins");
+  // font-family: to-lower-case("POPPINS");
+  // font-family: str-length("POPPINS");
+  // font-family: str-index("Helvitica Neue", "Neue");
+  // font-family: str-insert("Helvitica Neue", " Mono", 15);
+  // font-family: str-slice("Helvitica Neue", 11);
+  // font-family: unique-id();
+
+  // ===== color functions in sass =====
+  // background-color: $card-bg;
+  // background-color: darken($card_white_bg, 10);
+  // background-color: lighten($primary-color, 34);
+  // background-color: adjust-hue($primary-color, 355);
+  // background-color: saturate($primary-color, 100);
+  // background-color: desaturate($primary-color, 90);
+  // background-color: mix($primary-color, blue, 50);
+  background-color: transparentize($primary-color, 0.8);
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .card-content {
+    padding: 20px;
+    text-align: center;
+
+    .card-title {
+      font-size: 1.5rem;
+      color: $text-color;
+      @include margin(bottom, 10);
+    }
+
+    .card-description {
+      font-size: 0.95rem;
+      color: darken($text-color, 20%);
+      @include margin(bottom, 20);
+    }
+  }
+
+  &:hover {
+    transform: scale(1.03);
+    @include box-shadow(30px);
+  }
+}

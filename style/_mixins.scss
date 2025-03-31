@@ -1,0 +1,12 @@
+@mixin transition($time: 0.3s) {
+  transition: all $time ease-in-out;
+}
+
+@mixin box-shadow($blur: 15px) {
+  box-shadow: 0 5px $blur $shadow-color;
+}
+
+// interpolation for margin
+@mixin margin($position, $unit) {
+  margin-#{$position}: $unit + px;
+}

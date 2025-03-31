@@ -1,0 +1,16 @@
+@import "variables";
+@import "mixins";
+@import "card";
+@import "button";
+
+body {
+  background-color: #f4f4f4;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.base_color {
+  width: 300px;
+  height: 300px;
+  background-color: $primary-color;
+  margin: auto;
+}
