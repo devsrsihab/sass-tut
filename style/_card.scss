@@ -42,7 +42,20 @@
   // background-color: saturate($primary-color, 100);
   // background-color: desaturate($primary-color, 90);
   // background-color: mix($primary-color, blue, 50);
-  background-color: transparentize($primary-color, 0.8);
+  // background-color: transparentize($primary-color, 0.8);
+
+  // ===== list functions in sass =====
+  // $list: [10px 20px 30px 40px];
+  // $list2: 50px, 60px, 70px, 80px;
+  // padding: length($list);
+  // padding: nth($list, 3);
+  // padding: set-nth($list, 2, 23rem);
+  // padding: join($list, $list2, comma);
+  // padding: append($list, 11px, comma);
+  // padding: zip($list, $list2);
+  // padding: index($list, 300px);
+  // padding: list-separator($list2);
+  // padding: is-bracketed($list2);
 
   img {
     width: 100%;

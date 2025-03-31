@@ -5,8 +5,7 @@
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
   transition: all 0.4s ease-in-out;
   cursor: pointer;
-  margin: 50px auto;
-  background-color: rgba(52, 152, 219, 0.2); }
+  margin: 50px auto; }
   .card img {
     width: 100%;
     height: auto;
