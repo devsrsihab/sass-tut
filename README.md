@@ -287,7 +287,7 @@ $list: 10px, 20px, 30px; // Creates a list of values
 </details>
 
 <details id="numberFunctions">
-  <summary><strong>Number Functions in SASS</strong></summary>
+  <summary><strong>9. Number Functions in SASS</strong></summary>
 
 ```scss
 // ===== Number Functions in SASS =====
@@ -306,7 +306,7 @@ padding: unitless(10);
 </details>
 
 <details id="stringFunctions"> 
-<summary><strong>String Functions in SASS</strong></summary>
+<summary><strong>10. String Functions in SASS</strong></summary>
 
 ```scss
 // ===== String Functions in SASS =====
@@ -324,7 +324,7 @@ font-family: unique-id();
 </details>
 
 <details id="colorFunctions">
- <summary><strong>Color Functions in SASS</strong></summary>
+ <summary><strong>11. Color Functions in SASS</strong></summary>
 
 ```scss
 // ===== Color Functions in SASS =====
@@ -341,7 +341,7 @@ background-color: transparentize($primary-color, 0.8);
 </details>
 
 <details id="listFunctions">
- <summary><strong>List Functions in SASS</strong></summary>
+ <summary><strong>12. List Functions in SASS</strong></summary>
 
 ```scss
 // ===== List Functions in SASS =====
