@@ -6,16 +6,16 @@ This repository is for practicing various functions in SASS, including number fu
 
 - [1. Variable](#variable)
 - [2. Nesting](#nesting)
-- [3. Partials & Imports](#partials-imports)
+- [3. Partials & Imports](#partialsImports)
 - [4. Mixins](#mixins)
 - [5. Extend](#extend)
 - [6. Operators](#operators)
 - [7. Interpolation](#interpolation)
 - [8. Function](#function)
-- [9. Number Functions](#number-functions)
-- [10. String Functions](#string-functions)
-- [11. Color Functions](#color-functions)
-- [12. List Functions](#list-functions)
+- [9. Number Functions](#numberFunctions)
+- [10. String Functions](#stringFunctions)
+- [11. Color Functions](#colorFunctions)
+- [12. List Functions](#listFunctions)
 
 <details id="variable">
   <summary ><strong>1. Variable in SASS</strong></summary>
@@ -32,7 +32,7 @@ button {
 
 </details>
 
-<details>
+<details id="nesting">
   <summary><strong>2. Nesting in SASS</strong></summary>
 
 ```scss
@@ -58,7 +58,7 @@ button {
 
 </details>
 
-<details>
+<details id="partialsImports">
   <summary><strong>3. Partials & Imports in SASS</strong></summary>
 
 ```scss
@@ -82,7 +82,7 @@ body {
 
 </details>
 
-<details>
+<details id="mixins">
   <summary><strong>4. Mixins in SASS</strong></summary>
 
 ```scss
@@ -112,7 +112,7 @@ body {
 
 </details>
 
-<details>
+<details id="extend">
   <summary><strong>5. Extend in SASS</strong></summary>
 
 ```scss
@@ -140,7 +140,7 @@ body {
 
 </details>
 
-<details>
+<details id="operators">
   <summary><strong>6. Operators in SASS</strong></summary>
 
 ```scss
@@ -234,7 +234,59 @@ $list: 10px, 20px, 30px; // Creates a list of values
 
 </details>
 
-<details>
+<details id="interpolation">
+  <summary><strong>7. Interpolation in SASS</strong></summary>
+
+```scss
+// Mixin to set margin for a specific position (top, right, bottom, left)
+@mixin margin($pistion, $unit) {
+  margin-#{$pistion}: #{$unit}; // Dynamically set margin for the specified side
+}
+
+// Using the mixin to apply margin to different sides dynamically
+.box1 {
+  @include margin(top, 10px); // Apply margin-top: 10px
+}
+
+.box2 {
+  @include margin(right, 15px); // Apply margin-right: 15px
+}
+
+.box3 {
+  @include margin(bottom, 20px); // Apply margin-bottom: 20px
+}
+
+.box4 {
+  @include margin(left, 25px); // Apply margin-left: 25px
+}
+```
+
+</details>
+
+<details id="function">
+  <summary><strong>8. Functions in SASS</strong></summary>
+
+```scss
+// Function to calculate padding based on screen width
+@function dynamic-padding($base-padding) {
+  $viewport-width: 100vw; // 100% of viewport width
+  $padding: $base-padding * ($viewport-width / 1000); // Scale padding with screen size (e.g., 1000px base)
+  @return $padding;
+}
+
+// Applying dynamic padding to elements
+.container {
+  padding: dynamic-padding(20); // Will scale the padding based on screen size
+}
+
+.box {
+  padding: dynamic-padding(10); // Smaller padding for the box
+}
+```
+
+</details>
+
+<details id="numberFunctions">
   <summary><strong>Number Functions in SASS</strong></summary>
 
 ```scss
@@ -253,7 +305,8 @@ padding: unitless(10);
 
 </details>
 
-<details> <summary><strong>String Functions in SASS</strong></summary>
+<details id="stringFunctions"> 
+<summary><strong>String Functions in SASS</strong></summary>
 
 ```scss
 // ===== String Functions in SASS =====
@@ -270,7 +323,8 @@ font-family: unique-id();
 
 </details>
 
-<details> <summary><strong>Color Functions in SASS</strong></summary>
+<details id="colorFunctions">
+ <summary><strong>Color Functions in SASS</strong></summary>
 
 ```scss
 // ===== Color Functions in SASS =====
@@ -286,7 +340,8 @@ background-color: transparentize($primary-color, 0.8);
 
 </details>
 
-<details> <summary><strong>List Functions in SASS</strong></summary>
+<details id="listFunctions">
+ <summary><strong>List Functions in SASS</strong></summary>
 
 ```scss
 // ===== List Functions in SASS =====
