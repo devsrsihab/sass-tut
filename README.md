@@ -11,7 +11,7 @@ This repository is for practicing various functions in SASS, including number fu
 <details>
   <summary><strong>Number Functions in SASS</strong></summary>
 
-```scss
+
 // ===== Number Functions in SASS ===== 
 padding: ceil(5.9);
 padding: floor(2.9);
@@ -66,4 +66,4 @@ padding: zip($list, $list2);
 padding: index($list, 300px);
 padding: list-separator($list2);
 padding: is-bracketed($list2);
-</details> ```
+</details> 
