@@ -26,7 +26,7 @@ padding: unitless(10);
 </details> 
 
 <details> <summary><strong>String Functions in SASS</strong></summary>
-
+```
 // ===== String Functions in SASS =====
 font-family: quote(Poppins);
 font-family: unquote("Poppins");
@@ -37,6 +37,7 @@ font-family: str-index("Helvitica Neue", "Neue");
 font-family: str-insert("Helvitica Neue", " Mono", 15);
 font-family: str-slice("Helvitica Neue", 11);
 font-family: unique-id();
+  ```
 </details>
 
 <details> <summary><strong>Color Functions in SASS</strong></summary>
