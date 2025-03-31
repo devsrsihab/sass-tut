@@ -18,7 +18,7 @@ This repository is for practicing various functions in SASS, including number fu
 - [12. List Functions](#list-functions)
 
 <details id="variable">
-  <summary ><strong>Variable in SASS</strong></summary>
+  <summary ><strong>1. Variable in SASS</strong></summary>
 
 ```scss
 $primary: #3498db;
@@ -33,7 +33,7 @@ button {
 </details>
 
 <details>
-  <summary><strong>Nesting in SASS</strong></summary>
+  <summary><strong>2. Nesting in SASS</strong></summary>
 
 ```scss
 .container {
@@ -59,7 +59,7 @@ button {
 </details>
 
 <details>
-  <summary><strong>Partials & Imports in SASS</strong></summary>
+  <summary><strong>3. Partials & Imports in SASS</strong></summary>
 
 ```scss
 // _variables.scss
