@@ -83,6 +83,158 @@ body {
 </details>
 
 <details>
+  <summary><strong>4. Mixins in SASS</strong></summary>
+
+```scss
+// Mixin definition
+@mixin button-styles($bg-color, $text-color) {
+  background-color: $bg-color;
+  color: $text-color;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Using the mixin
+.button-primary {
+  @include button-styles(#3498db, white);
+}
+
+.button-secondary {
+  @include button-styles(#2ecc71, white);
+}
+```
+
+</details>
+
+<details>
+  <summary><strong>5. Extend in SASS</strong></summary>
+
+```scss
+// Base styles
+.button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+}
+
+// Extend the base styles
+.button-primary {
+  @extend .button;
+  background-color: #3498db;
+  color: white;
+}
+
+.button-secondary {
+  @extend .button;
+  background-color: #2ecc71;
+  color: white;
+}
+```
+
+</details>
+
+<details>
+  <summary><strong>6. Operators in SASS</strong></summary>
+
+```scss
+// ===================== Arithmetic Operators =====================
+
+// Addition (+)
+$a: 5;
+$b: 10;
+$add: $a + $b; // Adds $a and $b, result = 15
+
+// Subtraction (-)
+$subtract: $b - $a; // Subtracts $a from $b, result = 5
+
+// Multiplication (*)
+$multiply: $a * 2; // Multiplies $a by 2, result = 10
+
+// Division (/)
+$divide: $b / $a; // Divides $b by $a, result = 2
+
+// Modulus (%)
+$modulus: $b % $a; // Divides $b by $a and returns the remainder, result = 0
+
+// ===================== Comparison Operators =====================
+
+// Equal to (==)
+$is_equal: $a == $b; // Checks if $a is equal to $b, result = false
+
+// Not equal to (!=)
+$is_not_equal: $a != $b; // Checks if $a is not equal to $b, result = true
+
+// Greater than (>)
+$is_greater: $b > $a; // Checks if $b is greater than $a, result = true
+
+// Less than (<)
+$is_lesser: $a < $b; // Checks if $a is less than $b, result = true
+
+// Greater than or equal to (>=)
+$is_greater_or_equal: $b >= $a; // Checks if $b is greater than or equal to $a, result = true
+
+// Less than or equal to (<=)
+$is_lesser_or_equal: $a <= $b; // Checks if $a is less than or equal to $b, result = true
+
+// ===================== Boolean Operators =====================
+
+// AND (and)
+$is_true: true and false; // Checks if both expressions are true, result = false
+
+// OR (or)
+$is_false: false or true; // Checks if at least one expression is true, result = true
+
+// NOT (not)
+$is_not_true: not true; // Inverts the boolean value of true, result = false
+
+// ===================== String Operators =====================
+
+// String Concatenation (+)
+$string1: "Hello, ";
+$string2: "world!";
+$string_concat: $string1 + $string2; // Concatenates $string1 and $string2, result = "Hello, world!"
+
+// ===================== Unary Operators =====================
+
+// Negation (-)
+$negate: -$a; // Negates the value of $a, result = -5
+
+// ===================== List Operators =====================
+
+// Join Lists (+)
+$list1: 10px, 20px, 30px;
+$list2: 40px, 50px;
+$list_joined: $list1 + $list2; // Joins two lists, result = 10px, 20px, 30px, 40px, 50px
+
+// List Separator (,)
+$list: 10px, 20px, 30px; // Creates a list of values
+
+// ===================== Example Output =====================
+
+// Displaying results in a comment or for debugging purposes
+// You can use these variables in your styles or debugging to see the results
+// You could write the results to the console in a CSS rule if necessary:
+
+.debug {
+  content: "Addition result: #{$add}"; // Will output: "Addition result: 15"
+  content: "Subtraction result: #{$subtract}"; // Will output: "Subtraction result: 5"
+  content: "Multiplication result: #{$multiply}"; // Will output: "Multiplication result: 10"
+  content: "Division result: #{$divide}"; // Will output: "Division result: 2"
+  content: "Modulus result: #{$modulus}"; // Will output: "Modulus result: 0"
+  content: "String Concatenation: #{$string_concat}"; // Will output: "String Concatenation: Hello, world!"
+}
+```
+
+</details>
+
+<details>
   <summary><strong>Number Functions in SASS</strong></summary>
 
 ```scss
