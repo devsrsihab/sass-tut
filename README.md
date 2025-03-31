@@ -16,6 +16,7 @@ This repository is for practicing various functions in SASS, including number fu
 - [10. String Functions](#stringFunctions)
 - [11. Color Functions](#colorFunctions)
 - [12. List Functions](#listFunctions)
+- [13. Selector ](#selector)
 
 <details id="variable">
   <summary ><strong>1. Variable in SASS</strong></summary>
@@ -361,7 +362,7 @@ padding: is-bracketed($list2);
 </details>
 
 <details id="selector">
-  <summary><strong>10. Selector  in SASS</strong></summary>
+  <summary><strong>13. Selector  in SASS</strong></summary>
 
 ```scss
 // ===== selectors in sass =====
