@@ -297,7 +297,6 @@ $list: 10px, 20px, 30px; // Creates a list of values
   <summary><strong>9. Number Functions in SASS</strong></summary>
 
 ```scss
-// ===== Number Functions in SASS =====
 padding: ceil(5.9);
 padding: floor(2.9);
 padding: round(2.4);
@@ -316,7 +315,6 @@ padding: unitless(10);
 <summary><strong>10. String Functions in SASS</strong></summary>
 
 ```scss
-// ===== String Functions in SASS =====
 font-family: quote(Poppins);
 font-family: unquote("Poppins");
 font-family: to-upper-case("Poppins");
@@ -334,7 +332,6 @@ font-family: unique-id();
  <summary><strong>11. Color Functions in SASS</strong></summary>
 
 ```scss
-// ===== Color Functions in SASS =====
 background-color: $card-bg;
 background-color: darken($card_white_bg, 10);
 background-color: lighten($primary-color, 34);
@@ -351,7 +348,6 @@ background-color: transparentize($primary-color, 0.8);
  <summary><strong>12. List Functions in SASS</strong></summary>
 
 ```scss
-// ===== List Functions in SASS =====
 $list: [10px 20px 30px 40px];
 $list2: 50px, 60px, 70px, 80px;
 padding: length($list);
@@ -371,7 +367,6 @@ padding: is-bracketed($list2);
   <summary><strong>13. Selector  in SASS</strong></summary>
 
 ```scss
-// ===== selectors in sass =====
 $selector: selector-nest("ul", "li"); // "ul li"
 $selector: selector-append(".acb,", "_active"); // ".acb_active"
 $selector: selector-replace("a.abc.extra", ".extra", ".sohan"); // "a.abc.sohan"
@@ -395,7 +390,6 @@ $selector: selector-extend(
   <summary><strong>14. Map in SASS</strong></summary>
 
 ```scss
-// ===== map in sass =====
 $font-weight: (
   "thin": 100,
   "light": 300,
@@ -554,8 +548,6 @@ body {
   <summary><strong>17.  @media & @at-root Directives  in SASS</strong></summary>
 
 ```scss
-// ===== @media & @at-root Directives in sass =====
-
 // use case 1
 .container {
   width: 1100px;
