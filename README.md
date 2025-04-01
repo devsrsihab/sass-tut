@@ -18,7 +18,7 @@ This repository is for practicing various functions in SASS, including number fu
 - [12. List Functions](#listFunctions)
 - [13. Selector ](#selector)
 - [14. Map ](#map)
-- [14. Introspection ](#introspection)
+- [15. Introspection ](#introspection)
 
 <details id="variable">
   <summary ><strong>1. Variable in SASS</strong></summary>
