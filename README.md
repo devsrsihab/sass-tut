@@ -435,7 +435,7 @@ $map_mr: map-remove(
 
 </details>
 
-<details id="introspection ">
+<details id="introspection">
   <summary><strong>15. Introspection  in SASS</strong></summary>
 
 ```scss
