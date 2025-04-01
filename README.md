@@ -18,6 +18,7 @@ This repository is for practicing various functions in SASS, including number fu
 - [12. List Functions](#listFunctions)
 - [13. Selector ](#selector)
 - [14. Map ](#map)
+- [14. Introspection ](#introspection)
 
 <details id="variable">
   <summary ><strong>1. Variable in SASS</strong></summary>
@@ -429,6 +430,42 @@ $map_mr: map-remove(
   ); // ("thin", "light", "regular", "medium", "bold", "black")
   font-weight: map-values($font-weight); // (100, 300, 400, 500, 700, 900)
   font-weight: map-has-key($light_weight, "thin"); // true
+}
+```
+
+</details>
+
+<details id="introspection ">
+  <summary><strong>15. Introspection  in SASS</strong></summary>
+
+```scss
+$cha: "Arial";
+$list: 10px 33px 55px;
+$map: (
+  "regular": 400,
+  "medium": 500,
+);
+$num: 22px;
+
+@mixin border_radius($radius) {
+  border-radius: $radius;
+}
+
+@function adds($a, $b) {
+  @return $a + $b;
+}
+
+.test {
+  padding: variable-exists(num); // true (local scope variable $num exists)
+  padding: global-variable-exists(
+    num
+  ); // true (global scope variable $num exists)
+  padding: mixin-exists(
+    border_radiuss
+  ); // false (typo in mixin name, should be border_radius)
+  padding: function-exists(adds); // true (function 'adds' exists)
+  padding: type-of(map); // "map" (returns the type of $map)
+  padding: inspect(num); // 22px (inspects and returns the value of $num)
 }
 ```
 
