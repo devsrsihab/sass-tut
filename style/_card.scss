@@ -130,3 +130,29 @@
 //   font-weight: map-values($font-weight);
 //   font-weight: map-has-key($light_weight, "thin");
 // }
+
+// ===== Introspection in sass =====
+$cha: "Arial";
+$list: 10px 33px 55px;
+$map: (
+  "regular": 400,
+  "medium": 500,
+);
+$num: 22px;
+
+@mixin border_radius($radius) {
+  border-radius: $radius;
+}
+
+@function adds($a, $b) {
+  @return $a + $b;
+}
+
+.test {
+  // padding: variable-exists(num);
+  // padding: global-variable-exists(num);
+  // padding: mixin-exists(border_radiuss);
+  // padding: function-exists(adds);
+  // padding: type-of(map);
+  padding: inspect(num);
+}
