@@ -19,6 +19,7 @@ This repository is for practicing various functions in SASS, including number fu
 - [13. Selector ](#selector)
 - [14. Map ](#map)
 - [15. Introspection ](#introspection)
+- [16. @content Directive ](#contentDirective)
 
 <details id="variable">
   <summary ><strong>1. Variable in SASS</strong></summary>
@@ -466,6 +467,42 @@ $num: 22px;
   padding: function-exists(adds); // true (function 'adds' exists)
   padding: type-of(map); // "map" (returns the type of $map)
   padding: inspect(num); // 22px (inspects and returns the value of $num)
+}
+```
+
+</details>
+
+<details id="contentDirective">
+  <summary><strong>16. @content Directive  in SASS</strong></summary>
+
+```scss
+body {
+  background-color: grey;
+}
+
+// mixin media
+@mixin media($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@include media(1300px) {
+  body {
+    background-color: red;
+  }
+}
+
+@include media(1000px) {
+  body {
+    background-color: green;
+  }
+}
+
+@include media(800px) {
+  body {
+    background-color: blue;
+  }
 }
 ```
 

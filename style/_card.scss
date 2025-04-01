@@ -156,3 +156,73 @@
 //   padding: type-of(map);
 //   padding: inspect(num);
 // }
+
+// ===== Content directives in sass =====
+
+// use case 1
+// @mixin border_radius($radius) {
+//   --webkit-border-radius: $radius;
+//   --moz-border-radius: $radius;
+//   border-radius: $radius;
+//   @content;
+// }
+
+// .abc {
+//   @include border_radius(10px) {
+//     border-style: solid;
+//   }
+// }
+
+// use case 2
+// @mixin test {
+//   #menu {
+//     @content;
+//   }
+// }
+// @include test {
+//   .block {
+//     color: green;
+//   }
+// }
+
+// use case 3
+// @mixin hover {
+//   &:hover {
+//     @content;
+//   }
+// }
+// .button {
+//   border: 1px solid black;
+//   @include hover {
+//     border-width: 2px;
+//   }
+// }
+
+body {
+  background-color: grey;
+}
+
+// mixin media
+@mixin media($breakpoint) {
+  @media screen and (max-width: $breakpoint) {
+    @content;
+  }
+}
+
+@include media(1300px) {
+  body {
+    background-color: red;
+  }
+}
+
+@include media(1000px) {
+  body {
+    background-color: green;
+  }
+}
+
+@include media(800px) {
+  body {
+    background-color: blue;
+  }
+}
