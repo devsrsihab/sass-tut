@@ -24,6 +24,7 @@ This repository is for practicing various functions in SASS, including number fu
 - [18. @if & @else Directives](#ifElseDirective)
 - [19. @for Loop Directive](#forLoopDirective)
 - [20. @each Loop Directive](#eachLoopDirective)
+- [21. @while Loop Directive](#whileLoopDirective)
 
 <details id="variable">
   <summary ><strong>1. Variable in SASS</strong></summary>
@@ -648,6 +649,26 @@ $list: ((normal, bold, 10px), (semiBold, semi-bold, 20px));
     font-weight: $weight;
     font-size: $size;
   }
+}
+```
+
+</details>
+
+<details id="whileLoopDirective">
+  <summary><strong>21. @while Loop Directive in SASS</strong></summary>
+
+```scss
+$i: 10;
+$f-size: 10;
+
+@while $i <= 50 {
+  .sohan_#{$i} {
+    padding-left: 1px * $i;
+    font-size: $f-size + px;
+  }
+
+  $i: $i + 10;
+  $f-size: $f-size + 2;
 }
 ```
 

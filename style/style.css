@@ -25,13 +25,25 @@
     transform: scale(1.03);
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15); }
 
-.normal {
-  font-weight: bold;
+.sohan_10 {
+  padding-left: 10px;
   font-size: 10px; }
 
-.semiBold {
-  font-weight: semi-bold;
-  font-size: 20px; }
+.sohan_20 {
+  padding-left: 20px;
+  font-size: 12px; }
+
+.sohan_30 {
+  padding-left: 30px;
+  font-size: 14px; }
+
+.sohan_40 {
+  padding-left: 40px;
+  font-size: 16px; }
+
+.sohan_50 {
+  padding-left: 50px;
+  font-size: 18px; }
 
 .card-btn {
   background-color: #3498db;
