@@ -20,6 +20,7 @@ This repository is for practicing various functions in SASS, including number fu
 - [14. Map ](#map)
 - [15. Introspection ](#introspection)
 - [16. @content Directive ](#contentDirective)
+- [17. @media & @at-root Directives ](#mediaAtRootDirective)
 
 <details id="variable">
   <summary ><strong>1. Variable in SASS</strong></summary>
@@ -541,6 +542,60 @@ body {
 @include media(800px) {
   body {
     background-color: blue;
+  }
+}
+```
+
+</details>
+
+<details id="mediaAtRootDirective">
+  <summary><strong>17.  @media & @at-root Directives  in SASS</strong></summary>
+
+```scss
+// ===== @media & @at-root Directives in sass =====
+
+// use case 1
+.container {
+  width: 1100px;
+  margin: 0px auto;
+
+  @media screen and (max-width: 1150px) {
+    width: 900px;
+  }
+  @media screen and (max-width: 950px) {
+    width: 700px;
+  }
+}
+
+// use case 2
+.item {
+  color: red;
+
+  @at-root {
+    .item-wrapper {
+      color: green;
+      img {
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .item-child {
+    background-color: chartreuse;
+  }
+}
+
+// use case 3
+@media print {
+  .container {
+    font-size: 12px;
+    color: green;
+
+    @at-root (without: media) {
+      font-size: 14px;
+      color: black;
+    }
   }
 }
 ```
