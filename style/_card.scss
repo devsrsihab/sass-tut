@@ -229,7 +229,7 @@
 
 // ===== @media & @at-root Directives in sass =====
 
-//  // use case 1
+// // use case 1
 // .container {
 //   width: 1100px;
 //   margin: 0px auto;
@@ -242,7 +242,7 @@
 //   }
 // }
 
-//  // use case 2
+// // use case 2
 // .item {
 //   color: red;
 
@@ -262,14 +262,34 @@
 // }
 
 // // use case 3
-@media print {
-  .container {
-    font-size: 12px;
-    color: green;
+// @media print {
+//   .container {
+//     font-size: 12px;
+//     color: green;
 
-    @at-root (without: media) {
-      font-size: 14px;
-      color: black;
-    }
+//     @at-root (without: media) {
+//       font-size: 14px;
+//       color: black;
+//     }
+//   }
+// }
+
+// ===== @if & @else Directives in sass ====
+
+@mixin box($value) {
+  @if $value == "dark" {
+    background-color: black;
+    color: white;
+  } @else if $value == "light" {
+    background-color: lightgray;
+    color: black;
   }
+}
+
+.mybox {
+  @include box("dark");
+  padding: 20px;
+  margin: 100px;
+  width: 200px;
+  font-family: Arial, Helvetica, sans-serif;
 }

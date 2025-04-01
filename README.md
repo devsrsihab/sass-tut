@@ -21,6 +21,7 @@ This repository is for practicing various functions in SASS, including number fu
 - [15. Introspection ](#introspection)
 - [16. @content Directive ](#contentDirective)
 - [17. @media & @at-root Directives ](#mediaAtRootDirective)
+- [18. @if & @else Directives ](#ifElseDirective)
 
 <details id="variable">
   <summary ><strong>1. Variable in SASS</strong></summary>
@@ -597,6 +598,31 @@ body {
       color: black; // These rules will be outside the print media query
     }
   }
+}
+```
+
+</details>
+
+<details id="ifElseDirective">
+  <summary><strong>17. @if & @else Directives  in SASS</strong></summary>
+
+```scss
+@mixin box($value) {
+  @if $value == "dark" {
+    background-color: black;
+    color: white;
+  } @else if $value == "light" {
+    background-color: lightgray;
+    color: black;
+  }
+}
+
+.mybox {
+  @include box("dark");
+  padding: 20px;
+  margin: 100px;
+  width: 200px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 ```
 
