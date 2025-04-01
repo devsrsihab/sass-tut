@@ -560,10 +560,10 @@ body {
   margin: 0px auto;
 
   @media screen and (max-width: 1150px) {
-    width: 900px;
+    width: 900px; // Applies at screen ≤ 1150px
   }
   @media screen and (max-width: 950px) {
-    width: 700px;
+    width: 700px; // Applies at screen ≤ 950px
   }
 }
 
@@ -573,7 +573,7 @@ body {
 
   @at-root {
     .item-wrapper {
-      color: green;
+      color: green; // Moved to root level (not nested inside .item)
       img {
         width: 100%;
         object-fit: cover;
@@ -582,19 +582,19 @@ body {
   }
 
   .item-child {
-    background-color: chartreuse;
+    background-color: chartreuse; // Remains nested inside .item
   }
 }
 
 // use case 3
 @media print {
   .container {
-    font-size: 12px;
+    font-size: 12px; // Scoped inside @media print
     color: green;
 
     @at-root (without: media) {
-      font-size: 14px;
-      color: black;
+      font-size: 14px; // Pulled out of the @media print
+      color: black; // These rules will be outside the print media query
     }
   }
 }
