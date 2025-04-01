@@ -604,7 +604,7 @@ body {
 </details>
 
 <details id="ifElseDirective">
-  <summary><strong>17. @if & @else Directives  in SASS</strong></summary>
+  <summary><strong>18. @if & @else Directives  in SASS</strong></summary>
 
 ```scss
 @mixin box($value) {
