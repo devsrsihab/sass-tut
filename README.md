@@ -630,7 +630,7 @@ body {
 </details>
 
 <details id="forLoopDirective">
-  <summary><strong>18. @for Loop Directive in SASS</strong></summary>
+  <summary><strong>19. @for Loop Directive in SASS</strong></summary>
 
 ```scss
 @for $i from 1 through 6 {
