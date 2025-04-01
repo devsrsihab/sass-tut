@@ -23,6 +23,7 @@ This repository is for practicing various functions in SASS, including number fu
 - [17. @media & @at-root Directives](#mediaAtRootDirective)
 - [18. @if & @else Directives](#ifElseDirective)
 - [19. @for Loop Directive](#forLoopDirective)
+- [20. @each Loop Directive](#eachLoopDirective)
 
 <details id="variable">
   <summary ><strong>1. Variable in SASS</strong></summary>
@@ -631,6 +632,21 @@ body {
     padding: 20px;
     background-color: darken(pink, $i * 9%);
     margin: 10px;
+  }
+}
+```
+
+</details>
+
+<details id="eachLoopDirective">
+  <summary><strong>20. @each Loop Directive in SASS</strong></summary>
+
+```scss
+$list: ((normal, bold, 10px), (semiBold, semi-bold, 20px));
+@each $name, $weight, $size in $list {
+  .#{$name} {
+    font-weight: $weight;
+    font-size: $size;
   }
 }
 ```

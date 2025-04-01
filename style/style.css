@@ -25,41 +25,13 @@
     transform: scale(1.03);
     box-shadow: 0 5px 30px rgba(0, 0, 0, 0.15); }
 
-.color_bar_1 {
-  width: 50px;
-  padding: 20px;
-  background-color: #ff92a5;
-  margin: 10px; }
+.normal {
+  font-weight: bold;
+  font-size: 10px; }
 
-.color_bar_2 {
-  width: 100px;
-  padding: 20px;
-  background-color: #ff647f;
-  margin: 10px; }
-
-.color_bar_3 {
-  width: 150px;
-  padding: 20px;
-  background-color: #ff3659;
-  margin: 10px; }
-
-.color_bar_4 {
-  width: 200px;
-  padding: 20px;
-  background-color: #ff0833;
-  margin: 10px; }
-
-.color_bar_5 {
-  width: 250px;
-  padding: 20px;
-  background-color: #da0026;
-  margin: 10px; }
-
-.color_bar_6 {
-  width: 300px;
-  padding: 20px;
-  background-color: #ac001e;
-  margin: 10px; }
+.semiBold {
+  font-weight: semi-bold;
+  font-size: 20px; }
 
 .card-btn {
   background-color: #3498db;
