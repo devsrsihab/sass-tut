@@ -476,6 +476,45 @@ $num: 22px;
   <summary><strong>16. @content Directive  in SASS</strong></summary>
 
 ```scss
+// use case 1
+@mixin border_radius($radius) {
+  --webkit-border-radius: $radius;
+  --moz-border-radius: $radius;
+  border-radius: $radius;
+  @content;
+}
+
+.abc {
+  @include border_radius(10px) {
+    border-style: solid;
+  }
+}
+
+// use case 2
+@mixin test {
+  #menu {
+    @content;
+  }
+}
+@include test {
+  .block {
+    color: green;
+  }
+}
+
+// use case 3
+@mixin hover {
+  &:hover {
+    @content;
+  }
+}
+.button {
+  border: 1px solid black;
+  @include hover {
+    border-width: 2px;
+  }
+}
+
 body {
   background-color: grey;
 }
